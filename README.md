@@ -14,6 +14,7 @@ Welcome to my Rust learning journey! 🚀 This README is like a storybook about 
    - [Lifetime Annotations](#lifetime-annotations)
    - [Lifetime Elision](#lifetime-elision)
    - [Lifetime Bounds](#lifetime-bounds)
+   - [Lifetimes in a Struct](#lifetimes-in-a-struct)
 
 **Will be adding more daily**
 
@@ -57,6 +58,16 @@ Rust has lifetime elision rules that allow the omission of explicit lifetime ann
 
 Lifetimes can be bounded to specific scopes using lifetime bounds, ensuring references are valid for a certain duration.
 
----
+### Lifetimes in a Struct
 
+ It helps to manage references and ensure memory safety. When it comes to structs, lifetimes can be used to define the scope of references held within the struct.
+ 
+In Rust, lifetimes are used to ensure that references to data remain valid throughout their usage. A lifetime parameter is a name that represents the scope of a reference, indicating how long the reference is valid. This helps prevent dangling pointers, which occur when a reference points to data that has been freed or is no longer valid.
 
+Think of lifetimes in Rust like expiration dates for references. Just as food isn't safe to eat after its expiration date, Rust references have lifetimes that decide how long they stay valid. Whether you explicitly state lifetimes or let the borrow checker figure it out, it's all about making sure references are used only when they should be. This keeps your program safe from memory problems and ensures it works correctly.
+
+```rust
+struct ImportantExcerpt<'a> {
+    part: &'a str,
+}
+```
