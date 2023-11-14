@@ -1,6 +1,6 @@
 # Rust README (2024 goals)
 
-Welcome to my Rust learning journey! 🚀 This README is like a storybook about my Rust journey. It'll keep growing as I learn more, adding new things I discover in the world of Rust. 📖✨
+Welcome to my Rust learning journey! 🚀 This README is like a storybook about my Rust journey. It'll keep growing as I learn more, adding new things I discover in the world of Rust. Throughout the year, I'll share my progress as I become proficient in Rust. 📖✨
 
 ## Table of Contents
 
