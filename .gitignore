@@ -1,0 +1,11 @@
+#Miscellaneous
+**/tempCodeRunnerFile.rs
+**/.DS_Store
+**/DS_Store
+.DS_Store
+DS_Store
+
+#Build
+build/
+.gitattributes
+
