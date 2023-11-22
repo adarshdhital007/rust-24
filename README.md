@@ -19,8 +19,12 @@ Welcome to my Rust learning journey! 🚀 This README is like a storybook about 
    - [Lifetimes in a Struct](#lifetimes-in-a-struct)
 
 3. [Enums](#enums)
+
    - [Pattern Matching](#pattern-matching)
    - [Match Control Flow](#match-control-flow)
+
+4. [Generics](#generics)
+   - [Generic](#ge)
 
 **Will be adding more daily**
 
@@ -91,6 +95,7 @@ enum Bool{
    True,False
 }
 ```
+
 // enum Bool - i.e name of the data type<br>
 // True , False - i.e variant of the data type
 
@@ -129,5 +134,39 @@ fn time_to_wait(light: TrafficLight) -> u8 {
     }
 }
 ```
+
 **The code defines an enum TrafficLight with variants Red, Yellow, and Green. The function time_to_wait takes a TrafficLight as input and returns the corresponding time to wait: 60 seconds for Red, 10 seconds for Yellow, and 45 seconds for Green.**
 
+### Generics
+
+Generics are used to create special functions that can be used to represent signatures and structs.
+
+**Generic Type**
+
+```bash
+fn largest<T>(list: &[T]) -> &T {
+```
+
+**Code 2**
+This code is not generic enough to handle different types of elements in the list slice.
+
+```bash
+fn largest<T>(list: &[T]) -> &T {
+    let mut largest = &list[0];
+
+    for item in list {
+        if item > largest {
+            largest = item;
+        }
+    }
+    largest
+}
+```
+
+**For fixing the above code,we have to pass in Ord trait**
+
+The Ord trait defines a method cmp that allows us to compare two elements of the same type and determine which one is greater.
+
+```bash
+fn largest<T:Ord>(list: &[T]) -> &T {
+```
