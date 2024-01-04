@@ -31,5 +31,5 @@ fn main() {
 
     let result = number_of_beams(bank);
 
-    println!("Number of Laser Beams: {}", result); //12
+    println!("Number of Laser Beams: {}", result); // 12
 }
