@@ -9,7 +9,7 @@ pub fn number_of_beams(bank: Vec<String>) -> i32 {
     for i in 0..n {
         let mut curr_bank_count = 0;
         for ch in bank[i].chars() {
-            if ch == '1' {
+            if ch == '1' { 
                 curr_bank_count += 1;
             }
         }
