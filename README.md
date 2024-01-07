@@ -24,7 +24,14 @@ Welcome to my Rust learning journey! 🚀 This README is like a storybook about 
    - [Match Control Flow](#match-control-flow)
 
 4. [Generics](#generics)
+
    - [Generic](#ge)
+
+5. [FunctionalUtilities](#functionalutilities)
+   - [into_iter()](#into_iter)
+   - [collect()](#collect)
+   - [filter()](#filter)
+   - [binary_search_by_key](#binary_search_by_key)
 
 **Will be adding more daily**
 
@@ -170,3 +177,31 @@ The Ord trait defines a method cmp that allows us to compare two elements of the
 ```bash
 fn largest<T:Ord>(list: &[T]) -> &T {
 ```
+
+### FunctionalUtilities
+
+### into_iter()
+part of the 'IntoIterator' trait in Rust.It is used to convert an owned value to a vector.It is commonly used with collections (e.g arrays, vectors) to transform them into iterators.
+
+The ownership of the original collection is transferred to the iterator.
+
+### collect()
+is an iterator method used to transform the elements of an iterator to a specific collection type.
+
+```rust
+let numbers = vec![1, 2, 3, 4, 5];
+let squared_numbers: Vec<_> = numbers.into_iter().map(|x| x * x).collect();
+```
+### filter()
+is an iterator adapter that creates a new iterator by selectively including or excluding elements based on a given condition.
+
+It is used to perfom filtering operation on the elements of an iterator , allowing only those that satisfy the given condition
+
+```rust
+let numbers = vec![1, 2, 3, 4, 5];
+    let even_numbers: Vec<_> = numbers.into_iter().filter(|&x| x % 2 == 0).collect();
+```
+
+### binary_search_by_key
+performs a binary search on a sorted slice or vector , using a key extraction function to map each element to a key.
+
